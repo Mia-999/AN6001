@@ -23,5 +23,9 @@ def SA_sult():
     r = textblob.TextBlob(q).sentiment
     return(render_template("SA_result.html",r=r))
 
+@app.route("/paynow",methods=["GET","POST"])
+def paynow():
+    return(render_template("paynow.html"))
+
 if __name__ == "__main__":
     app.run()
